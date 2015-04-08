@@ -8,74 +8,36 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     </head>
-    <body ng-app="Tuner" ng-controller="AppCtrl" layout="column">
+    <body ng-app="Tuner" layout="column" ng-controller="appCtrl">
 
-    <section layout="row" flex>
+        <section layout="row" ng-cloak="" flex>
 
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" flex>
-            <md-toolbar class="md-theme-amber" layout="row">
-                <h1 class="md-toolbar-tools"><img  class="logo" src="/images/logo.png" alt=""/></h1>
-            </md-toolbar>
-            <md-content class="md-padding" ng-controller="LeftCtrl">
-                <md-button ng-click="close()" class="md-primary" hide-gt-md>
-                    Close
-                </md-button>
-                <p hide-md show-gt-md>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore id ipsa iure odio perferendis soluta tempore. Accusantium debitis, eligendi illum labore maiores minima officiis omnis sit soluta sunt veritatis voluptatem!
-                </p>
-            </md-content>
+            <left-sidenav></left-sidenav>
 
-        </md-sidenav>
+            <content></content>
 
-        <md-content flex>
-            <md-toolbar class="md-theme-amber app-toolbar" layout="row">
-                <div class="md-toolbar-tools" >
-                    <md-button class="md-icon-button md-button md-primary" hide-gt-md ng-click="toggleLeft()">
-                        <ng-md-icon icon="menu" style="fill:white"></ng-md-icon>
-                    </md-button>
-                    <h3 class="md-padding">Whats Playing</h3>
-                    <span flex></span>
-                    <md-button layout="end center" class="md-icon-button md-button md-primary"ng-click="toggleRight()">
-                        <ng-md-icon icon="more_vert" style="fill:white"></ng-md-icon>
-                    </md-button>
+            <right-sidenav></right-sidenav>
 
-                </div>
-            </md-toolbar>
-            <div layout="column" class="md-padding" layout-margin layout-fill layout-padding layout-align="top center" >
-                <div flex>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ea, fuga hic illum inventore labore nemo non obcaecati, placeat praesentium quam, quas quos ratione velit vitae! Aspernatur omnis optio provident?
-                    </p>
-                </div>
-
-            </div>
-
-            <div flex></div>
-
-        </md-content>
-
-        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
-
-            <md-toolbar class="md-theme-light">
-                <h1 class="md-toolbar-tools">Menu</h1>
-            </md-toolbar>
-            <md-content ng-controller="RightCtrl" class="md-padding">
-                <md-button ng-click="close()" class="md-primary">
-                    Close
-                </md-button>
-            </md-content>
-
-        </md-sidenav>
-
-    </section>
+        </section>
 
         <script src="/bower_components/angular/angular.js"></script>
         <script src="/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
         <script src="/bower_components/angular-animate/angular-animate.js"></script>
         <script src="/bower_components/angular-material/angular-material.js"></script>
+
         <script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
-        <script src="/js/app.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
 
+        <script src="/js/app.js"></script>
+        <script src="/js/factories/socket.factory.js"></script>
+        <script src="/js/factories/menu.factory.js"></script>
+        <script src="/js/components/content/controller.js"></script>
+        <script src="/js/components/content/directive.js"></script>
+        <script src="/js/components/sidenav/left.controller.js"></script>
+        <script src="/js/components/sidenav/left.directive.js"></script>
+        <script src="/js/components/sidenav/right.controller.js"></script>
+        <script src="/js/components/sidenav/right.directive.js"></script>
     </body>
 </html>
