@@ -3,17 +3,26 @@
 
     angular.module( "Tuner", [
             "ngMaterial",
+            "ngMessages",
             "ngMdIcons",
             "ngRoute"
         ])
-        .controller('appCtrl', ["$log", "Socket", appCtrl]);
-
-
-    function appCtrl($log, Socket) {
-        /**
-         * Socket Methods*/
-        Socket.on('init', function (data) {
-            $log.debug("socket.connected");
-        });
-    }
+        .config(['$routeProvider',
+            function($routeProvider) {
+                $routeProvider
+                    .when("", {
+                        redirectTo : "/playing"
+                    })
+                    .when('/playing', {
+                        templateUrl: 'templates/playing.html',
+                        controller: 'PlayingCtrl'
+                    })
+                    .when('/search', {
+                        templateUrl: 'templates/search.html',
+                        controller: 'SearchCtrl'
+                    })
+                    .otherwise({
+                        redirectTo: '/playing'
+                    });
+            }]);
 })();
