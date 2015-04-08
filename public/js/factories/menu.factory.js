@@ -4,11 +4,6 @@
     angular.module("Tuner")
         .factory('Menu', ["$http", "$log", menuFactory]);
 
-    /**
-     * use of promise was found in the stackoverflow thread below :
-     * http://stackoverflow.com/questions/16286605/initialize-angularjs-service-with-asynchronous-data
-     * */
-
     function menuFactory($http, $log) {
         var index = 0,
             items = [];
