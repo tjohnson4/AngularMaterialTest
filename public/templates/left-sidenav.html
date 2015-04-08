@@ -1,0 +1,16 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" flex>
+    <md-toolbar class="md-theme-amber" layout="row">
+        <h1 class="md-toolbar-tools"><img  class="logo" src="/images/logo.png" alt=""/></h1>
+    </md-toolbar>
+    <md-content class="md-padding">
+        <div ng-model="menu">
+            <md-list-item class="md-2-line" ng-repeat="item in items" ng-init="" ng-value="item">
+                <md-item-content>
+                    <md-button class="left-sidenav" ng-click="setIndex($index)" ng-value="obj" layout-align="start center" flex>
+                        {{item.title}}
+                    </md-button>
+                </md-item-content>
+            </md-list-item>
+        </div>
+    </md-content>
+</md-sidenav>

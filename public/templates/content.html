@@ -1,0 +1,26 @@
+<md-content flex>
+    <md-toolbar class="md-theme-amber app-toolbar" layout="row">
+        <div class="md-toolbar-tools" >
+            <md-button class="md-icon-button md-button md-primary" hide-gt-md ng-click="toggleLeft()">
+                <ng-md-icon icon="menu" style="fill:white"></ng-md-icon>
+            </md-button>
+            <h3 ng-controller="LeftNavCtrl" class="md-padding">{{items[index].title}}</h3>
+            <span flex></span>
+            <md-button layout="end center" class="md-icon-button md-button md-primary" ng-click="toggleRight()">
+                <ng-md-icon icon="more_vert" style="fill:white"></ng-md-icon>
+            </md-button>
+
+        </div>
+    </md-toolbar>
+    <div layout="column" class="md-padding" layout-margin layout-fill layout-padding layout-align="top center" >
+        <div flex>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ea, fuga hic illum inventore labore nemo non obcaecati, placeat praesentium quam, quas quos ratione velit vitae! Aspernatur omnis optio provident?
+            </p>
+        </div>
+
+    </div>
+
+    <div flex></div>
+
+</md-content>
