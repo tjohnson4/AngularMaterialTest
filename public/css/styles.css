@@ -2,3 +2,9 @@
     height : 35%;
     width : 35%;
 }
+
+.md-sidenav-left .md-button {
+    text-align: left;
+    height : 40px;
+    padding-left: 15px;
+}
