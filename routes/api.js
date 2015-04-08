@@ -10,10 +10,6 @@ router.get('/menu', function(req, res) {
         {
             title : "Find a Song",
             action : "search"
-        },
-        {
-            title : "Who's Listening?",
-            action : "users"
         }
     ]);
 });
