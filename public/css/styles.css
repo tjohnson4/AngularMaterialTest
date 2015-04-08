@@ -8,3 +8,25 @@
     height : 40px;
     padding-left: 15px;
 }
+
+.md-toolbar-tools > .md-button:nth-child(1) {
+    margin-right: 5px;
+}
+
+
+md-grid-list {
+    margin: 8px; }
+md-grid-list .gray {
+    background: #f5f5f5; }
+md-grid-list .green {
+    background: #b9f6ca; }
+md-grid-list .yellow {
+    background: #ffff8d; }
+md-grid-list .blue {
+    background: #84ffff; }
+md-grid-list .purple {
+    background: #b388ff; }
+md-grid-list .red {
+    background: #ff8a80; }
+md-grid-list md-grid-tile {
+    transition: all 400ms ease-out 50ms; }
